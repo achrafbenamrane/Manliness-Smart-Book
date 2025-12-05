@@ -60,8 +60,13 @@ export default function TimelineNav({ currentChapter, totalChapters }: TimelineN
                       `}
                       >
                         {chapter.id === 0 ? (
-                          // Home icon for first button
-                          <span className="text-sm md:text-base">🏠</span>
+                          // Home icon for first button - styled SVG
+                          <svg 
+                            className={`w-4 h-4 md:w-5 md:h-5 ${isActive ? 'fill-dark-900' : 'fill-bronze-200'}`}
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                          </svg>
                         ) : (
                           // Numbers for chapters 1-5
                           <span className={`
