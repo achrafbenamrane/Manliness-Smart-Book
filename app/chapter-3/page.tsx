@@ -2,30 +2,32 @@
 
 import SmartBookLayout from '@/components/SmartBookLayout';
 import Chapter, { Section, Quote, Comparison } from '@/components/Chapter';
+import {useTranslations} from 'next-intl';
 
 export default function Chapter3() {
+  const t = useTranslations('chapter3');
+  
   return (
     <SmartBookLayout currentChapter={3} totalChapters={5}>
       <Chapter
         number={3}
-        title="Modern Confusion & Fake Influencers"
-        subtitle="The Age of Manufactured Masculinity"
+        title={t('title')}
+        subtitle={t('subtitle')}
       >
-        <Section title="The Great Deception">
+        <Section title={t('deceptionTitle')}>
           <p className="text-bronze-200 text-lg mb-4">
-            In 2026, masculinity has become a commodity. Rent a Lamborghini for the day, pose 
-            shirtless with rented abs, film a 60-second motivation speech in a luxury hotel lobby, 
-            and suddenly you're a "success coach" with a course to sell.
+            {t('deceptionText')}
           </p>
+        </Section>
+
+        <Section title={t('influencerTitle')} delay={0.1}>
           <p className="text-bronze-200 text-lg mb-4">
-            This is not masculinity. This is marketing. These aren't men—they're brands. 
-            And like all brands, when the money stops flowing, the facade crumbles.
+            {t('influencerText')}
           </p>
         </Section>
 
         <Quote
-          text="When everyone is selling the dream, nobody is living it. True power doesn't need to be advertised—it's felt in presence, proven in action."
-          author="Street Wisdom, 2026"
+          text={t('influencerQuote')}
           delay={0.2}
         />
 
@@ -115,114 +117,78 @@ export default function Chapter3() {
           </p>
         </div>
 
-        <Section title="The Media Propaganda Machine" delay={0.3}>
+        <Section title={t('propagandaTitle')} delay={0.3}>
           <p className="text-bronze-200 text-lg mb-4">
-            But the influencers are just symptoms. The real disease is deeper: a systematic propaganda 
-            campaign through media to feminize, weaken, and confuse men about their identity.
+            {t('propagandaText')}
           </p>
           
           <div className="space-y-6 my-8">
             <div className="glass-effect rounded-lg p-8 border-l-4 border-red-600/60">
-              <h4 className="text-xl font-bold text-red-400 mb-4">🎮 VIDEO GAMES: Then vs Now</h4>
+              <h4 className="text-xl font-bold text-red-400 mb-4">{t('gamesTitle')}</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h5 className="text-bronze-400 font-bold mb-2">Old Games (1990s-2000s)</h5>
+                  <h5 className="text-bronze-400 font-bold mb-2">{t('gamesOld')}</h5>
                   <ul className="text-bronze-200 text-sm space-y-1">
-                    <li>• Heroes were strong, decisive men</li>
-                    <li>• You saved princesses, fought evil</li>
-                    <li>• Rewards came from skill and mastery</li>
-                    <li>• Male characters: warriors, leaders, protectors</li>
-                    <li>• Clear good vs evil narratives</li>
+                    {(t.raw('gamesOldList') as string[]).map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
-                  <h5 className="text-red-400 font-bold mb-2">New Games (2020s)</h5>
+                  <h5 className="text-red-400 font-bold mb-2">{t('gamesNew')}</h5>
                   <ul className="text-iron-400 text-sm space-y-1">
-                    <li>• Male heroes replaced or made weak</li>
-                    <li>• Endless microtransactions, pay-to-win</li>
-                    <li>• Addictive loops designed to waste time</li>
-                    <li>• Male characters: emotional, uncertain, secondary</li>
-                    <li>• Moral relativism, no clear values</li>
+                    {(t.raw('gamesNewList') as string[]).map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className="glass-effect rounded-lg p-8 border-l-4 border-red-600/60">
-              <h4 className="text-xl font-bold text-red-400 mb-4">🎵 MUSIC: Then vs Now</h4>
+              <h4 className="text-xl font-bold text-red-400 mb-4">{t('musicTitle')}</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h5 className="text-bronze-400 font-bold mb-2">Old Music (70s-90s)</h5>
+                  <h5 className="text-bronze-400 font-bold mb-2">{t('musicOld')}</h5>
                   <ul className="text-bronze-200 text-sm space-y-1">
-                    <li>• Lyrics about strength, struggle, meaning</li>
-                    <li>• Real instruments, musical talent</li>
-                    <li>• Songs about building, creating, loving</li>
-                    <li>• Male artists: confident, masculine energy</li>
-                    <li>• Inspired action and reflection</li>
+                    {(t.raw('musicOldList') as string[]).map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
-                  <h5 className="text-red-400 font-bold mb-2">New Music (2020s)</h5>
+                  <h5 className="text-red-400 font-bold mb-2">{t('musicNew')}</h5>
                   <ul className="text-iron-400 text-sm space-y-1">
-                    <li>• Lyrics glorify drugs, materialism, betrayal</li>
-                    <li>• Auto-tune replaces skill</li>
-                    <li>• Songs about using, consuming, destroying</li>
-                    <li>• Male artists: confused gender signals</li>
-                    <li>• Promotes depression and nihilism</li>
+                    {(t.raw('musicNewList') as string[]).map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className="glass-effect rounded-lg p-8 border-l-4 border-red-600/60">
-              <h4 className="text-xl font-bold text-red-400 mb-4">🎬 MOVIES: Then vs Now</h4>
+              <h4 className="text-xl font-bold text-red-400 mb-4">{t('moviesTitle')}</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h5 className="text-bronze-400 font-bold mb-2">Old Movies (80s-90s)</h5>
+                  <h5 className="text-bronze-400 font-bold mb-2">{t('moviesOld')}</h5>
                   <ul className="text-bronze-200 text-sm space-y-1">
-                    <li>• Male heroes solved problems through action</li>
-                    <li>• Father figures were wise and strong</li>
-                    <li>• Men protected families and communities</li>
-                    <li>• Masculinity celebrated, not mocked</li>
-                    <li>• Heroes earned respect through deeds</li>
+                    {(t.raw('moviesOldList') as string[]).map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
-                  <h5 className="text-red-400 font-bold mb-2">New Movies (2020s)</h5>
+                  <h5 className="text-red-400 font-bold mb-2">{t('moviesNew')}</h5>
                   <ul className="text-iron-400 text-sm space-y-1">
-                    <li>• Male heroes incompetent or villains</li>
-                    <li>• Fathers absent, stupid, or evil</li>
-                    <li>• Men need saving by female characters</li>
-                    <li>• Masculinity portrayed as toxic</li>
-                    <li>• Male characters are jokes or threats</li>
+                    {(t.raw('moviesNewList') as string[]).map((item, i) => (
+                      <li key={i}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-
-          <p className="text-bronze-200 text-lg mt-8 mb-4">
-            This isn't evolution—it's deliberate programming. Three generations exposed to media 
-            that tells them: being a strong man is bad, protecting is oppression, leadership is 
-            tyranny, and traditional masculinity is toxic.
-          </p>
-        </Section>
-
-        <Quote
-          text="When a society systematically attacks masculinity in every form of media, don't be surprised when you end up with broken, confused, weak men. This is the intended result."
-          delay={0.4}
-        />
-
-        <Section title="The Antidote" delay={0.5}>
-          <p className="text-bronze-200 text-lg mb-4">
-            Unfollow the grifters. Stop consuming modern propaganda disguised as entertainment. 
-            Find real mentors—men who've built things that last, who have families that respect them, 
-            who don't need to sell you a course because they're actually busy living the life they preach.
-          </p>
-          <p className="text-bronze-200 text-lg">
-            The path to real manhood has never changed. It's just been obscured by noise and 
-            deliberate cultural subversion.
-          </p>
         </Section>
       </Chapter>
     </SmartBookLayout>

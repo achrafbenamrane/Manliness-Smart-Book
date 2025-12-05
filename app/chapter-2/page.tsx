@@ -2,30 +2,33 @@
 
 import SmartBookLayout from '@/components/SmartBookLayout';
 import Chapter, { Section, Quote, Comparison } from '@/components/Chapter';
+import {useTranslations} from 'next-intl';
 
 export default function Chapter2() {
+  const t = useTranslations('chapter2');
+  
   return (
     <SmartBookLayout currentChapter={2} totalChapters={5}>
       <Chapter
         number={2}
-        title="Warrior Discipline & Old Strength"
-        subtitle="The Forge of True Masculinity"
+        title={t('title')}
+        subtitle={t('subtitle')}
       >
-        <Section title="The Warrior's Path">
+        <Section title={t('warriorTitle')}>
           <p className="text-bronze-200 text-lg mb-4">
-            Throughout history, the warrior archetype represented the pinnacle of masculine 
-            development. Not because of violence, but because warriors embodied the highest 
-            standards of self-discipline, loyalty, and sacrifice.
+            {t('warriorText')}
           </p>
+        </Section>
+
+        <Section title={t('romanTitle')} delay={0.1}>
           <p className="text-bronze-200 text-lg mb-4">
-            The Spartans, the Samurai, the Roman Legionnaires, the Viking Berserkers—different 
-            cultures, same core principles: Train hard. Honor your brothers. Die well if necessary.
+            {t('romanText')}
           </p>
         </Section>
 
         <Quote
-          text="The more you sweat in training, the less you bleed in battle. This principle applies to every arena of life."
-          author="Ancient Military Wisdom"
+          text={t('romanQuote')}
+          author={t('romanQuoteAuthor')}
           delay={0.2}
         />
 
@@ -115,56 +118,29 @@ export default function Chapter2() {
           </p>
         </Section>
 
-        <Section title="The Mujahideen Spirit: Modern Warriors" delay={0.4}>
+        <Section title={t('mujahideenTitle')} delay={0.4}>
           <p className="text-bronze-200 text-lg mb-4">
-            While the West was busy deconstructing warrior culture, calling it "toxic" and "outdated," 
-            the Algerian freedom fighters (Mujahideen) proved that warrior discipline is timeless.
+            {t('mujahideenText')}
           </p>
 
           <div className="glass-effect rounded-lg p-8 my-8 border-l-4 border-bronze-600">
             <h4 className="text-2xl font-serif font-bold text-bronze-400 mb-4">
-              Lessons from Algerian Warriors
+              {t('faithWarrior')}
             </h4>
-            <div className="space-y-4 text-bronze-200">
-              <p>
-                <strong className="text-bronze-300">They Fought with Nothing:</strong> No billion-dollar 
-                military budget. No advanced weapons. Just faith, brotherhood, and refusal to submit. 
-                They beat a superpower because their will was unbreakable.
-              </p>
-              <p>
-                <strong className="text-bronze-300">Discipline in Chaos:</strong> Prayer times maintained 
-                even in war zones. Fasting during Ramadan while fighting. Their spiritual discipline 
-                made them mentally unbreakable.
-              </p>
-              <p>
-                <strong className="text-bronze-300">Brotherhood Beyond Blood:</strong> Men from different 
-                tribes, villages, backgrounds—united by purpose. They protected each other with their lives. 
-                No man left behind wasn't a slogan; it was sacred law.
-              </p>
-              <p>
-                <strong className="text-bronze-300">Legacy Over Life:</strong> They knew they might die. 
-                They fought anyway. Because some things matter more than survival: freedom, honor, 
-                and the future of their children.
-              </p>
-            </div>
+            <p className="text-bronze-200">
+              {t('faithWarriorText')}
+            </p>
           </div>
 
-          <p className="text-bronze-200 text-lg mb-4">
-            These weren't barbarians. They were educated men who chose resistance over comfort. 
-            Teachers who became fighters. Farmers who became strategists. Students who became martyrs.
-          </p>
-
-          <p className="text-bronze-200 text-lg">
-            Today's generation needs this warrior spirit—not for physical war, but for the cultural 
-            and spiritual battles we face. The discipline to resist propaganda. The courage to stand 
-            for truth when it's unpopular. The brotherhood to build together instead of tearing each other down.
-          </p>
+          <div className="glass-effect rounded-lg p-8 my-8 border-l-4 border-bronze-600">
+            <h4 className="text-2xl font-serif font-bold text-bronze-400 mb-4">
+              {t('disciplineTitle')}
+            </h4>
+            <p className="text-bronze-200">
+              {t('disciplineText')}
+            </p>
+          </div>
         </Section>
-
-        <Quote
-          text="The Algerian warrior didn't fear death—he feared dying without purpose. Modern men fear discomfort—and die without ever truly living."
-          delay={0.5}
-        />
       </Chapter>
     </SmartBookLayout>
   );
