@@ -12,7 +12,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark-900 relative overflow-hidden flex items-center justify-center">
+    <div className="min-h-screen bg-dark-900 relative overflow-hidden flex items-center justify-center px-4">
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <motion.div
@@ -45,153 +45,147 @@ export default function Home() {
       {/* Grain Texture */}
       <div className="fixed inset-0 z-0 opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]" />
 
-      {/* Main Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-8 text-center">
-        {/* Book Icon/Symbol */}
+      {/* Book Cover Design */}
+      <div className="relative z-10 max-w-2xl w-full">
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{
-            duration: 1.2,
-            ease: [0.6, 0.01, 0.05, 0.95],
-            delay: 0.2
-          }}
-          className="mb-8 flex justify-center"
+          initial={{ rotateY: -90, opacity: 0 }}
+          animate={{ rotateY: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: [0.6, 0.01, 0.05, 0.95] }}
+          className="perspective-1000"
         >
-          <div className="text-9xl filter drop-shadow-[0_0_30px_rgba(196,164,132,0.5)]">
-            📖
+          {/* Book Cover Container */}
+          <div className="relative bg-gradient-to-br from-dark-800 via-dark-900 to-black border-4 border-bronze-600 rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.9)] overflow-hidden">
+            {/* Decorative Top Border */}
+            <div className="h-3 bg-gradient-to-r from-bronze-600 via-bronze-400 to-bronze-600"></div>
+            
+            {/* Book Content */}
+            <div className="p-12 md:p-16 relative">
+              {/* Decorative Corner Elements */}
+              <div className="absolute top-8 left-8 w-16 h-16 border-t-2 border-l-2 border-bronze-600 opacity-60"></div>
+              <div className="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2 border-bronze-600 opacity-60"></div>
+              <div className="absolute bottom-8 left-8 w-16 h-16 border-b-2 border-l-2 border-bronze-600 opacity-60"></div>
+              <div className="absolute bottom-8 right-8 w-16 h-16 border-b-2 border-r-2 border-bronze-600 opacity-60"></div>
+
+              {/* Book Icon */}
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-center mb-8"
+              >
+                <div className="text-7xl filter drop-shadow-[0_0_20px_rgba(196,164,132,0.6)]">
+                  📖
+                </div>
+              </motion.div>
+
+              {/* Book Title */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-center mb-8"
+              >
+                <h1 className="text-5xl md:text-6xl font-serif font-bold text-gradient leading-tight mb-4">
+                  The Evolution of
+                  <br />
+                  Manliness
+                </h1>
+                <div className="h-[2px] w-48 mx-auto bg-gradient-to-r from-transparent via-bronze-600 to-transparent mb-6"></div>
+                <p className="text-bronze-300 text-xl font-serif italic">
+                  Ancient Wisdom vs Modern Confusion
+                </p>
+              </motion.div>
+
+              {/* Short Description */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="text-center mb-10"
+              >
+                <p className="text-bronze-200/90 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
+                  A powerful journey through real masculinity: comparing ancient warriors 
+                  and honorable men to the fake influencers of 2026.
+                </p>
+              </motion.div>
+
+              {/* Author Name */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="text-center mb-10"
+              >
+                <p className="text-bronze-400/60 text-sm tracking-widest mb-2">WRITTEN BY</p>
+                <p className="text-bronze-300 text-2xl md:text-3xl font-serif font-bold tracking-wide">
+                  BENAMRANE MOHAMED ACHRAF
+                </p>
+              </motion.div>
+
+              {/* Call to Action Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="text-center"
+              >
+                <Link href="/chapter-1">
+                  <motion.button
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: "0 0 40px rgba(139, 94, 60, 0.6)"
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className="relative px-12 py-5 bg-gradient-to-r from-bronze-600 to-bronze-500 text-white text-xl font-bold rounded-lg shadow-[0_0_30px_rgba(139,94,60,0.4)] hover:shadow-[0_0_50px_rgba(139,94,60,0.8)] transition-all duration-300 overflow-hidden group"
+                  >
+                    <span className="relative z-10 flex items-center gap-3">
+                      <span>GO TO LEARN</span>
+                      <span className="text-2xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+                    </span>
+                    {/* Animated background */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-bronze-500 to-bronze-400"
+                      initial={{ x: '-100%' }}
+                      whileHover={{ x: '100%' }}
+                      transition={{ duration: 0.6 }}
+                    />
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Decorative Bottom Border */}
+            <div className="h-3 bg-gradient-to-r from-bronze-600 via-bronze-400 to-bronze-600"></div>
           </div>
+
+          {/* Book Shadow/Spine Effect */}
+          <div className="absolute -left-4 top-8 bottom-8 w-4 bg-gradient-to-r from-bronze-900/80 to-transparent rounded-l-lg blur-sm"></div>
         </motion.div>
 
-        {/* Title */}
+        {/* Floating Quote */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mb-6"
-        >
-          <h1 className="text-7xl md:text-8xl font-serif font-bold text-gradient leading-tight mb-4">
-            The Evolution of Manliness
-          </h1>
-          <div className="h-[2px] w-64 mx-auto bg-gradient-to-r from-transparent via-bronze-600 to-transparent" />
-        </motion.div>
-
-        {/* Subtitle */}
-        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-2xl md:text-3xl text-bronze-300 mb-4 font-serif italic"
+          transition={{ duration: 1, delay: 1.5 }}
+          className="mt-12 text-center"
         >
-          Ancient Wisdom vs. Modern Confusion
-        </motion.p>
-
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="text-lg text-bronze-200/80 mb-12 max-w-2xl mx-auto leading-relaxed"
-        >
-          A journey through time comparing real old men—warriors of honor, strength, and legacy—
-          to fake modern influencers of 2026. Discover what true masculinity means.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-        >
-          <Link href="/chapter-1">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="glass-effect metal-border px-10 py-5 rounded-lg text-xl font-bold text-bronze-300 hover:text-bronze-200 transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,94,60,0.5)] min-w-[250px]"
-            >
-              Begin Your Journey
-            </motion.button>
-          </Link>
-
-          <Link href="/chapter-3">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="glass-effect border-2 border-red-600/40 px-10 py-5 rounded-lg text-xl font-bold text-red-400/80 hover:text-red-300 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,38,38,0.3)] min-w-[250px]"
-            >
-              See Modern Fakery
-            </motion.button>
-          </Link>
-        </motion.div>
-
-        {/* Chapter Preview Cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-        >
-          <Link href="/chapter-1">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600 cursor-pointer transition-all"
-            >
-              <div className="text-4xl mb-3">⚔️</div>
-              <h3 className="text-bronze-400 font-bold text-lg mb-2">Ancient Principles</h3>
-              <p className="text-bronze-200/70 text-sm">The foundation of timeless strength</p>
-            </motion.div>
-          </Link>
-
-          <Link href="/chapter-2">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600 cursor-pointer transition-all"
-            >
-              <div className="text-4xl mb-3">🛡️</div>
-              <h3 className="text-bronze-400 font-bold text-lg mb-2">Warrior Discipline</h3>
-              <p className="text-bronze-200/70 text-sm">The forge of true masculinity</p>
-            </motion.div>
-          </Link>
-
-          <Link href="/chapter-4">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600 cursor-pointer transition-all"
-            >
-              <div className="text-4xl mb-3">⚒️</div>
-              <h3 className="text-bronze-400 font-bold text-lg mb-2">Rebuild Manhood</h3>
-              <p className="text-bronze-200/70 text-sm">The practical path forward</p>
-            </motion.div>
-          </Link>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 2, repeat: Infinity, delay: 2 }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-bronze-400/60 text-sm font-mono tracking-wider">START READING</p>
-            <div className="text-2xl text-bronze-400/60">↓</div>
-          </div>
+          <p className="text-bronze-400/70 text-sm italic max-w-md mx-auto">
+            "The world needs real men again. Will you answer the call?"
+          </p>
         </motion.div>
       </div>
 
-      {/* Decorative Elements */}
+      {/* Ambient Light Effects */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ duration: 2, delay: 1 }}
-        className="fixed top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-bronze-600 to-transparent"
-      />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ duration: 2, delay: 1 }}
-        className="fixed bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-bronze-600 to-transparent"
+        animate={{
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-bronze-600/20 rounded-full blur-[120px] pointer-events-none"
       />
     </div>
   );

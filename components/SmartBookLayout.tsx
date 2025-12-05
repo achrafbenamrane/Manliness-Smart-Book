@@ -10,6 +10,33 @@ interface SmartBookLayoutProps {
   totalChapters: number;
 }
 
+// Page turn animation variants
+const pageVariants = {
+  initial: (direction: number) => ({
+    rotateY: direction > 0 ? 90 : -90,
+    opacity: 0,
+    scale: 0.8,
+  }),
+  animate: {
+    rotateY: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.6, 0.01, 0.05, 0.95],
+    },
+  },
+  exit: (direction: number) => ({
+    rotateY: direction > 0 ? -90 : 90,
+    opacity: 0,
+    scale: 0.8,
+    transition: {
+      duration: 0.8,
+      ease: [0.6, 0.01, 0.05, 0.95],
+    },
+  }),
+};
+
 export default function SmartBookLayout({ 
   children, 
   currentChapter, 
@@ -26,20 +53,24 @@ export default function SmartBookLayout({
       {/* Grain Texture Overlay */}
       <div className="fixed inset-0 z-0 opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]" />
 
-      {/* Main Content */}
-      <div className="relative z-10">
-        <AnimatePresence mode="wait">
+      {/* Book Page Container with 3D Perspective */}
+      <div className="relative z-10 perspective-[2000px]">
+        <AnimatePresence mode="wait" custom={currentChapter}>
           <motion.div
             key={currentChapter}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ 
-              duration: 0.8, 
-              ease: [0.6, 0.01, 0.05, 0.95] 
+            custom={currentChapter}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="min-h-screen preserve-3d"
+            style={{
+              transformStyle: 'preserve-3d',
             }}
-            className="min-h-screen"
           >
+            {/* Page Shadow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 pointer-events-none" />
+            
             {children}
           </motion.div>
         </AnimatePresence>
@@ -51,15 +82,22 @@ export default function SmartBookLayout({
         totalChapters={totalChapters} 
       />
 
-      {/* Page Counter */}
+      {/* Page Counter with Book Aesthetic */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="fixed bottom-8 right-8 z-50 font-mono text-bronze-400/60 text-sm"
+        className="fixed bottom-8 right-8 z-50"
       >
-        <span className="text-bronze-400">{currentChapter}</span> / {totalChapters}
+        <div className="glass-effect rounded-lg px-4 py-2 border border-bronze-600/30">
+          <p className="font-serif text-bronze-400/80 text-sm">
+            Chapter <span className="text-bronze-300 font-bold text-lg">{currentChapter}</span> of {totalChapters}
+          </p>
+        </div>
       </motion.div>
+
+      {/* Book Spine Shadow (Left Edge) */}
+      <div className="fixed left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/40 to-transparent pointer-events-none z-20" />
     </div>
   );
 }
