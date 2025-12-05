@@ -1,0 +1,160 @@
+{
+  "home": {
+    "title": "The Evolution of Manliness",
+    "subtitle": "From Ancient Warriors to Modern Men",
+    "author": "BENAMRANE MOHAMED ACHRAF",
+    "cta": "GO TO LEARN"
+  },
+  "nav": {
+    "prologue": "Prologue",
+    "chapter1": "Ancient Principles",
+    "chapter2": "Warrior Discipline",
+    "chapter3": "Modern Confusion",
+    "chapter4": "Rebuilding Manhood",
+    "chapter5": "Path of Honor",
+    "chapterOf": "Chapter {current} of {total}"
+  },
+  "chapter1": {
+    "number": "Chapter One",
+    "title": "Ancient Masculine Principles",
+    "subtitle": "The Foundation of Timeless Strength",
+    "pillarsTitle": "The Pillars of Ancient Manhood",
+    "pillarsText": "In ancient civilizations, masculinity wasn't defined by appearance or social media followers. It was forged in the crucible of responsibility, honor, and sacrifice. These men built empires, protected their people, and left legacies that echo through millennia.",
+    "spartanTitle": "The Spartan Code",
+    "spartanText": "Spartan warriors weren't born; they were forged through brutal discipline and unwavering dedication. From age seven, boys entered the agoge - a rigorous training system that stripped away weakness and cultivated strength, courage, and brotherhood.",
+    "spartanQuote": "Come back with your shield, or on it.",
+    "spartanQuoteAuthor": "Spartan Mother to Her Son",
+    "algerianTitle": "Algerian & Muslim Men: The Last Guardians",
+    "algerianText": "While the West surrenders to weakness, Algerian and Muslim men stand as the last bastions of true masculinity. They carry the torch of ancient values in a world gone mad.",
+    "algerianStrength": "Strength Through Faith",
+    "algerianStrengthText": "Muslim men understand that true strength comes from submission to Allah, not to the whims of modern society. Prayer five times a day builds discipline. Fasting builds willpower. Charity builds character.",
+    "algerianFamily": "Guardians of Family",
+    "algerianFamilyText": "While Western men abandon their families, Muslim men embrace the sacred duty of protection and provision. They understand that being a man means being a shield for those who depend on you."
+  },
+  "chapter2": {
+    "number": "Chapter Two",
+    "title": "Warrior Discipline & Old Strength",
+    "subtitle": "The Forge of True Masculinity",
+    "warriorTitle": "The Warrior's Path",
+    "warriorText": "Ancient warriors understood a fundamental truth: comfort is the enemy of greatness. They embraced discomfort, hardship, and challenge as the forge that tempered their spirits into unbreakable steel.",
+    "romanTitle": "The Roman Legionnaire",
+    "romanText": "Roman soldiers marched 20 miles a day carrying 80 pounds of equipment. They built fortifications after long marches. They trained relentlessly. This wasn't punishment - it was transformation. Every drop of sweat was an investment in invincibility.",
+    "romanQuote": "The more you sweat in training, the less you bleed in battle.",
+    "romanQuoteAuthor": "Roman Military Maxim",
+    "mujahideenTitle": "The Mujahideen Spirit",
+    "mujahideenText": "The warriors of Islam, the Mujahideen, embody the ultimate fusion of spiritual devotion and warrior discipline. They don't fight for Instagram likes or YouTube views - they fight for principles worth dying for.",
+    "faithWarrior": "Faith as the Ultimate Weapon",
+    "faithWarriorText": "When you believe in something greater than yourself, fear becomes obsolete. The Mujahideen understood that martyrdom isn't defeat - it's victory. This mindset creates warriors that empires cannot break.",
+    "disciplineTitle": "Discipline Over Motivation",
+    "disciplineText": "Motivation is temporary. Discipline is permanent. Muslim men wake for Fajr prayer before dawn, whether they 'feel like it' or not. This daily act of discipline builds a character that modern men cannot comprehend."
+  },
+  "chapter3": {
+    "number": "Chapter Three",
+    "title": "Modern Confusion & Fake Influencers",
+    "subtitle": "The Age of Manufactured Masculinity",
+    "deceptionTitle": "The Great Deception",
+    "deceptionText": "Modern masculinity has been hijacked by clowns masquerading as men. Instagram influencers with abs and no accomplishments. TikTok stars with followers but no character. They've commodified masculinity into a product you can buy with the right supplements and workout plan.",
+    "influencerTitle": "The Influencer Illusion",
+    "influencerText": "These modern 'alpha males' preach about masculinity while living lives of pure vanity. They spend hours perfecting their appearance for photos, measuring their worth in likes and comments. Ancient warriors would laugh at these peacocks.",
+    "influencerQuote": "When everyone is selling you masculinity, nobody is actually living it.",
+    "propagandaTitle": "Media Propaganda: How They Feminized Men",
+    "propagandaText": "The systematic destruction of masculinity didn't happen by accident. It was deliberate, calculated, and executed through every medium that shapes our culture.",
+    "gamesTitle": "Video Games: Then vs Now",
+    "gamesOld": "Old Games (Real Men)",
+    "gamesOldList": [
+      "God of War (Original): Kratos was a warrior consumed by rage and purpose. Brutal, unforgiving, masculine.",
+      "Gears of War: Marcus Fenix - a grizzled soldier who spoke in grunts and killed with chainsaw guns.",
+      "Call of Duty (MW Series): Captain Price - a cigar-smoking badass who got the job done.",
+      "Doom: The Doom Slayer - literally too angry to die, ripping demons apart with bare hands."
+    ],
+    "gamesNew": "New Games (Weak Men)",
+    "gamesNewList": [
+      "God of War (New): Kratos became a soft dad worried about feelings and 'being better'.",
+      "The Last of Us 2: Joel - once a hardened survivor - turned into emotional pulp.",
+      "Modern COD: Operators with pronouns and participation trophies.",
+      "Fortnite: Dancing teenagers in neon costumes collecting battle pass skins."
+    ],
+    "musicTitle": "Music: From Warriors to Weaklings",
+    "musicOld": "Old Music (Masculine Energy)",
+    "musicOldList": [
+      "2Pac: 'Hit Em Up' - Raw aggression and unapologetic dominance.",
+      "Metallica: 'Master of Puppets' - Heavy, powerful, rebellious.",
+      "Johnny Cash: 'Folsom Prison Blues' - Outlaw masculinity.",
+      "AC/DC: 'Highway to Hell' - Rock and roll testosterone."
+    ],
+    "musicNew": "New Music (Feminine Energy)",
+    "musicNewList": [
+      "Drake: Crying about relationships and being 'in his feelings'.",
+      "Bad Bunny: Whatever that is. Painted nails and skirts.",
+      "Harry Styles: Dresses like your grandmother.",
+      "Lil Nas X: Actively destroying any concept of masculinity."
+    ],
+    "moviesTitle": "Movies: The Transformation",
+    "moviesOld": "Old Movies (Men Were Men)",
+    "moviesOldList": [
+      "Rambo: John Rambo - a one-man army who asked for nothing and gave no mercy.",
+      "Predator: Arnold and a team of absolute units hunting aliens.",
+      "Die Hard: John McClane - bloodied, beaten, but never broken.",
+      "300: Spartans choosing death over surrender."
+    ],
+    "moviesNew": "New Movies (Men Are Jokes)",
+    "moviesNewList": [
+      "Marvel Phase 4: Every male hero is either a joke or getting replaced by a woman.",
+      "The Eternals: The 'strongest' being is a gay man in a healthy relationship.",
+      "She-Hulk: Men are literally the punchline.",
+      "Star Wars Sequels: Male heroes are incompetent or evil; women are perfect."
+    ]
+  },
+  "chapter4": {
+    "number": "Chapter Four",
+    "title": "Rebuilding Real Manhood in 2026",
+    "subtitle": "The Practical Path Forward",
+    "honestyTitle": "Start With Brutal Honesty",
+    "honestyText": "Look in the mirror. Are you the man your ancestors would respect? Would ancient warriors follow you into battle? If the answer is no, it's time to change.",
+    "frameworkTitle": "The Masculine Reconstruction Framework",
+    "physical": "Physical Dominance",
+    "physicalText": "Your body is your first weapon. If you can't do 50 pushups, run 5 miles, or fight for 3 minutes without gasping, you're not ready. Ancient men could march all day and fight at night. What's your excuse?",
+    "mental": "Mental Fortitude",
+    "mentalText": "Comfort is poison. Seek discomfort daily. Cold showers, hard workouts, difficult conversations. Each challenge you embrace strengthens your mind.",
+    "spiritual": "Spiritual Grounding",
+    "spiritualText": "Without purpose beyond yourself, you're just a sophisticated animal. Find something worth dying for - whether it's God, family, or nation. Men without purpose drift into weakness.",
+    "modernTitle": "Reject Modern Weakness",
+    "modernText": "Stop seeking validation on social media. Stop watching porn. Stop playing victim. Stop making excuses. Every moment you spend in weakness is an insult to the men who built civilization.",
+    "resistanceTitle": "Learn from Men Who Resisted",
+    "resistanceText": "Throughout history, Muslim men have resisted empires, colonization, and cultural erasure. They didn't submit to the British, French, or American attempts to feminize them.",
+    "algerian": "The Algerian Revolution",
+    "algerianText": "Algerian men fought France for 8 years. Tortured, killed, hunted - they never surrendered. While modern men cry about microaggressions, Algerian martyrs died with 'Allahu Akbar' on their lips.",
+    "framework": "The Muslim Resistance Framework",
+    "frameworkList": [
+      "Know Your Enemy: The West wants to destroy your values. Recognize the attack.",
+      "Strengthen Your Base: Family, community, mosque. These are your fortifications.",
+      "Reject Their Poison: Western liberalism is designed to weaken you. Reject it completely.",
+      "Build Alternative Systems: Create businesses, schools, and communities that reflect your values."
+    ]
+  },
+  "chapter5": {
+    "number": "Chapter Five",
+    "title": "The Path of Honor: Final Chapter",
+    "subtitle": "Legacy, Leadership, and Living with Purpose",
+    "honorTitle": "What Is Honor in 2026?",
+    "honorText": "Honor isn't a relic of the past - it's the bedrock of masculine identity. In a world that celebrates weakness, honor is the mark of men who refuse to compromise their principles for comfort, approval, or survival.",
+    "keepWord": "Keep Your Word",
+    "keepWordText": "Your word is your bond. If you say you'll do something, death itself shouldn't stop you. Modern men make promises like they're reading terms and conditions - no intention of following through.",
+    "protectWeak": "Protect the Weak",
+    "protectWeakText": "A man's strength is measured by who he defends, not who he defeats. Stand between danger and the defenseless, even when it costs you everything.",
+    "leadTitle": "Leadership: The Ultimate Masculine Responsibility",
+    "leadText": "Real men don't wait for permission to lead. They see what needs to be done and do it. They take responsibility when things go wrong and give credit when things go right.",
+    "leadQuote": "A man who doesn't lead is a boy in a man's body.",
+    "legacyTitle": "Build a Legacy Worth Remembering",
+    "legacyText": "Your life isn't measured in years - it's measured in impact. What will people say about you when you're gone? That you had a nice car? Or that you built something that outlived you?",
+    "children": "Raise Warriors, Not Victims",
+    "childrenText": "If you have sons, teach them to be hard. Teach them to embrace struggle. Teach them that life owes them nothing. If you have daughters, teach them to respect men who embody these principles.",
+    "business": "Build Something Real",
+    "businessText": "Create businesses, organizations, or projects that serve your community. Money is a tool, not a goal. Use it to build infrastructure that outlasts you.",
+    "finalTitle": "The Final Challenge",
+    "finalText": "This isn't a book. It's a declaration of war against weakness. Every chapter was designed to force you to confront the gap between who you are and who you should be.",
+    "finalQuestion": "The Question:",
+    "finalQuestionText": "Will you continue being a passive consumer of content, or will you become a builder of legacies?",
+    "finalCall": "This is your moment. Choose."
+  }
+}

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -17,15 +20,21 @@ export const metadata: Metadata = {
   description: "An immersive journey through ancient masculine principles and modern realities",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.variable} ${playfair.variable}`}>
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <LanguageSwitcher />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

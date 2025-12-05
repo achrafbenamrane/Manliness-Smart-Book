@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ReactNode } from 'react';
 import TimelineNav from './TimelineNav';
+import {useTranslations} from 'next-intl';
 
 interface SmartBookLayoutProps {
   children: ReactNode;
@@ -42,6 +43,8 @@ export default function SmartBookLayout({
   currentChapter, 
   totalChapters 
 }: SmartBookLayoutProps) {
+  const t = useTranslations('nav');
+  
   return (
     <div className="min-h-screen bg-dark-900 relative overflow-hidden">
       {/* Ambient Background Effects */}
@@ -90,7 +93,7 @@ export default function SmartBookLayout({
         className="fixed bottom-2 left-1/2 -translate-x-1/2 z-30"
       >
         <p className="font-serif text-bronze-400/60 text-xs">
-          Chapter <span className="text-bronze-300 font-medium">{currentChapter}</span> of {totalChapters}
+          {t('chapterOf', { current: currentChapter, total: totalChapters })}
         </p>
       </motion.div>
 

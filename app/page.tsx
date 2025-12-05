@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const t = useTranslations('home');
 
   useEffect(() => {
     setIsLoaded(true);
@@ -86,39 +88,26 @@ export default function Home() {
                 className="text-center mb-4 md:mb-8"
               >
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gradient leading-tight mb-3 md:mb-4">
-                  The Evolution of
-                  <br />
-                  Manliness
+                  {t('title')}
                 </h1>
                 <div className="h-[2px] w-32 md:w-48 mx-auto bg-gradient-to-r from-transparent via-bronze-600 to-transparent mb-4 md:mb-6"></div>
                 <p className="text-bronze-300 text-base sm:text-lg md:text-xl font-serif italic px-4">
-                  Ancient Wisdom vs Modern Confusion
+                  {t('subtitle')}
                 </p>
               </motion.div>
 
-              {/* Short Description */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="text-center mb-6 md:mb-10 px-2"
-              >
-                <p className="text-bronze-200/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-                  A powerful journey through real masculinity: comparing ancient warriors 
-                  and honorable men to the fake influencers of 2026.
-                </p>
-              </motion.div>
+              {/* Short Description - removed since we have subtitle */}
 
               {/* Author Name */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-center mb-6 md:mb-10"
               >
                 <p className="text-bronze-400/60 text-xs md:text-sm tracking-widest mb-2">WRITTEN BY</p>
                 <p className="text-bronze-300 text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-bold tracking-wide px-4">
-                  BENAMRANE MOHAMED ACHRAF
+                  {t('author')}
                 </p>
               </motion.div>
 
@@ -126,7 +115,7 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
+                transition={{ duration: 0.8, delay: 1 }}
                 className="text-center"
               >
                 <Link href="/chapter-1">
@@ -139,7 +128,7 @@ export default function Home() {
                     className="relative px-8 sm:px-10 md:px-12 py-4 md:py-5 bg-gradient-to-r from-bronze-600 to-bronze-500 text-white text-base sm:text-lg md:text-xl font-bold rounded-lg shadow-[0_0_30px_rgba(139,94,60,0.4)] hover:shadow-[0_0_50px_rgba(139,94,60,0.8)] transition-all duration-300 overflow-hidden group"
                   >
                     <span className="relative z-10 flex items-center gap-2 md:gap-3">
-                      <span>GO TO LEARN</span>
+                      <span>{t('cta')}</span>
                       <span className="text-xl md:text-2xl group-hover:translate-x-1 transition-transform duration-300">→</span>
                     </span>
                     {/* Animated background */}

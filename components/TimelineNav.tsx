@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import {useTranslations} from 'next-intl';
 
 interface TimelineNavProps {
   currentChapter: number;
@@ -10,16 +11,17 @@ interface TimelineNavProps {
 }
 
 const chapters = [
-  { id: 0, title: 'Prologue', path: '/', icon: '◈' },
-  { id: 1, title: 'Ancient Principles', path: '/chapter-1', icon: '⚔' },
-  { id: 2, title: 'Warrior Discipline', path: '/chapter-2', icon: '🛡' },
-  { id: 3, title: 'Modern Confusion', path: '/chapter-3', icon: '⚠' },
-  { id: 4, title: 'Rebuilding Manhood', path: '/chapter-4', icon: '⚒' },
-  { id: 5, title: 'Path of Honor', path: '/chapter-5', icon: '👑' },
+  { id: 0, title: 'prologue', path: '/', icon: '◈' },
+  { id: 1, title: 'chapter1', path: '/chapter-1', icon: '⚔' },
+  { id: 2, title: 'chapter2', path: '/chapter-2', icon: '🛡' },
+  { id: 3, title: 'chapter3', path: '/chapter-3', icon: '⚠' },
+  { id: 4, title: 'chapter4', path: '/chapter-4', icon: '⚒' },
+  { id: 5, title: 'chapter5', path: '/chapter-5', icon: '👑' },
 ];
 
 export default function TimelineNav({ currentChapter, totalChapters }: TimelineNavProps) {
   const pathname = usePathname();
+  const t = useTranslations('nav');
 
   return (
     <motion.nav
@@ -87,7 +89,7 @@ export default function TimelineNav({ currentChapter, totalChapters }: TimelineN
                         <div className="glass-effect rounded-lg px-4 py-2 whitespace-nowrap">
                           <div className="text-2xl mb-1">{chapter.icon}</div>
                           <div className="text-xs text-bronze-300 font-medium">
-                            {chapter.title}
+                            {t(chapter.title)}
                           </div>
                         </div>
                       </motion.div>
