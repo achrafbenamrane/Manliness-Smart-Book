@@ -2,14 +2,17 @@
 
 import SmartBookLayout from '@/components/SmartBookLayout';
 import Chapter, { Section, Quote, Comparison } from '@/components/Chapter';
+import {useTranslations} from 'next-intl';
 
 export default function Chapter4() {
+  const t = useTranslations('chapter4');
+  
   return (
     <SmartBookLayout currentChapter={4} totalChapters={5}>
       <Chapter
         number={4}
-        title="Rebuilding Real Manhood in 2026"
-        subtitle="The Practical Path Forward"
+        title={t('title')}
+        subtitle={t('subtitle')}
       >
         <Section title="Start With Brutal Honesty">
           <p className="text-bronze-200 text-lg mb-4">

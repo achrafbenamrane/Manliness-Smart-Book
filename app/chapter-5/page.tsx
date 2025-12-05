@@ -2,14 +2,17 @@
 
 import SmartBookLayout from '@/components/SmartBookLayout';
 import Chapter, { Section, Quote } from '@/components/Chapter';
+import {useTranslations} from 'next-intl';
 
 export default function Chapter5() {
+  const t = useTranslations('chapter5');
+  
   return (
     <SmartBookLayout currentChapter={5} totalChapters={5}>
       <Chapter
         number={5}
-        title="The Path of Honor: Final Chapter"
-        subtitle="Legacy, Leadership, and Living with Purpose"
+        title={t('title')}
+        subtitle={t('subtitle')}
       >
         <Section title="What Is Honor in 2026?">
           <p className="text-bronze-200 text-lg mb-4">
