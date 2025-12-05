@@ -29,7 +29,34 @@
     "algerianStrength": "Strength Through Faith",
     "algerianStrengthText": "Muslim men understand that true strength comes from submission to Allah, not to the whims of modern society. Prayer five times a day builds discipline. Fasting builds willpower. Charity builds character.",
     "algerianFamily": "Guardians of Family",
-    "algerianFamilyText": "While Western men abandon their families, Muslim men embrace the sacred duty of protection and provision. They understand that being a man means being a shield for those who depend on you."
+    "algerianFamilyText": "While Western men abandon their families, Muslim men embrace the sacred duty of protection and provision. They understand that being a man means being a shield for those who depend on you.",
+    "cornerstonesTitle": "The Four Cornerstones",
+    "courageTitle": "Courage",
+    "courageText": "Not the absence of fear, but the mastery of it. Ancient warriors faced death with dignity, knowing their legacy would outlive their flesh.",
+    "honorTitle": "Honor",
+    "honorText": "Your word was your bond. A handshake meant more than any contract. Reputation was built over decades and could be lost in a moment.",
+    "disciplineTitle": "Discipline",
+    "disciplineText": "Self-mastery before mastery of others. The ability to delay gratification, endure suffering, and pursue excellence without external validation.",
+    "wisdomTitle": "Wisdom",
+    "wisdomText": "Not merely knowledge, but the application of experience. Understanding consequences, reading human nature, and making decisions that echo through time.",
+    "comparisonOldMen": [
+      "Built empires that lasted centuries",
+      "Sacrificed comfort for legacy",
+      "Mentored the next generation",
+      "Earned respect through action",
+      "Lived by a code bigger than themselves"
+    ],
+    "comparisonModernMen": [
+      "Build Instagram profiles that last until the algorithm changes",
+      "Sacrifice authenticity for likes",
+      "Sell courses to get-rich-quick seekers",
+      "Buy respect through flashy displays",
+      "Live by whatever is trending this week"
+    ],
+    "initiationTitle": "The Death of Initiation",
+    "initiationText1": "Every ancient culture had rituals that transformed boys into men. These weren't participation trophies—they were trials by fire. Vision quests, warrior training, tests of endurance that broke the weak and forged the strong.",
+    "initiationText2": "Modern society eliminated these rites of passage, replacing them with... nothing. No challenge, no transformation, no moment where society says: 'You are now a man.'",
+    "initiationText3": "And so we have 35-year-old 'boys' who never faced hardship, never tested themselves, never earned the title they claim by birthright."
   },
   "chapter2": {
     "number": "Chapter Two",

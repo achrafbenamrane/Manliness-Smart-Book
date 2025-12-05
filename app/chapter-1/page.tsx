@@ -32,70 +32,50 @@ export default function Chapter1() {
           delay={0.2}
         />
 
-        <Section title="The Four Cornerstones" delay={0.1}>
+        <Section title={t('cornerstonesTitle')} delay={0.1}>
           <div className="grid md:grid-cols-2 gap-6 mt-8">
             <div className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600">
-              <h3 className="text-2xl font-bold text-bronze-400 mb-3">⚔️ Courage</h3>
+              <h3 className="text-2xl font-bold text-bronze-400 mb-3">⚔️ {t('courageTitle')}</h3>
               <p className="text-bronze-200">
-                Not the absence of fear, but the mastery of it. Ancient warriors faced death with 
-                dignity, knowing their legacy would outlive their flesh.
+                {t('courageText')}
               </p>
             </div>
             <div className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600">
-              <h3 className="text-2xl font-bold text-bronze-400 mb-3">🛡️ Honor</h3>
+              <h3 className="text-2xl font-bold text-bronze-400 mb-3">🛡️ {t('honorTitle')}</h3>
               <p className="text-bronze-200">
-                Your word was your bond. A handshake meant more than any contract. Reputation 
-                was built over decades and could be lost in a moment.
+                {t('honorText')}
               </p>
             </div>
             <div className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600">
-              <h3 className="text-2xl font-bold text-bronze-400 mb-3">💪 Discipline</h3>
+              <h3 className="text-2xl font-bold text-bronze-400 mb-3">💪 {t('disciplineTitle')}</h3>
               <p className="text-bronze-200">
-                Self-mastery before mastery of others. The ability to delay gratification, 
-                endure suffering, and pursue excellence without external validation.
+                {t('disciplineText')}
               </p>
             </div>
             <div className="glass-effect rounded-lg p-6 border-l-4 border-bronze-600">
-              <h3 className="text-2xl font-bold text-bronze-400 mb-3">🏛️ Wisdom</h3>
+              <h3 className="text-2xl font-bold text-bronze-400 mb-3">🏛️ {t('wisdomTitle')}</h3>
               <p className="text-bronze-200">
-                Not merely knowledge, but the application of experience. Understanding 
-                consequences, reading human nature, and making decisions that echo through time.
+                {t('wisdomText')}
               </p>
             </div>
           </div>
         </Section>
 
         <Comparison
-          oldMen={[
-            "Built empires that lasted centuries",
-            "Sacrificed comfort for legacy",
-            "Mentored the next generation",
-            "Earned respect through action",
-            "Lived by a code bigger than themselves"
-          ]}
-          modernMen={[
-            "Build Instagram profiles that last until the algorithm changes",
-            "Sacrifice authenticity for likes",
-            "Sell courses to get-rich-quick seekers",
-            "Buy respect through flashy displays",
-            "Live by whatever is trending this week"
-          ]}
+          oldMen={t.raw('comparisonOldMen') as string[]}
+          modernMen={t.raw('comparisonModernMen') as string[]}
           delay={0.3}
         />
 
-        <Section title="The Death of Initiation" delay={0.2}>
+        <Section title={t('initiationTitle')} delay={0.2}>
           <p className="text-bronze-200 text-lg mb-4">
-            Every ancient culture had rituals that transformed boys into men. These weren't 
-            participation trophies—they were trials by fire. Vision quests, warrior training, 
-            tests of endurance that broke the weak and forged the strong.
+            {t('initiationText1')}
           </p>
           <p className="text-bronze-200 text-lg mb-4">
-            Modern society eliminated these rites of passage, replacing them with... nothing. 
-            No challenge, no transformation, no moment where society says: "You are now a man."
+            {t('initiationText2')}
           </p>
           <p className="text-bronze-200 text-lg">
-            And so we have 35-year-old "boys" who never faced hardship, never tested themselves, 
-            never earned the title they claim by birthright.
+            {t('initiationText3')}
           </p>
         </Section>
 
