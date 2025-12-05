@@ -46,19 +46,32 @@ export default function TimelineNav({ currentChapter, totalChapters }: TimelineN
                       whileTap={{ scale: 0.95 }}
                       className="flex flex-col items-center gap-2 relative"
                     >
-                      {/* Chapter Dot */}
+                      {/* Chapter Dot with Number/Icon */}
                       <div
                         className={`
-                        w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300
+                        w-8 h-8 md:w-10 md:h-10 rounded-full transition-all duration-300 flex items-center justify-center
                         ${isActive 
-                          ? 'bg-bronze-400 shadow-[0_0_20px_rgba(196,164,132,0.9)] scale-125' 
+                          ? 'bg-bronze-400 shadow-[0_0_20px_rgba(196,164,132,0.9)] scale-110' 
                           : isPast 
                           ? 'bg-bronze-600/70' 
                           : 'bg-iron-600/40'
                         }
                         group-hover:shadow-[0_0_20px_rgba(196,164,132,0.6)]
                       `}
-                      />
+                      >
+                        {chapter.id === 0 ? (
+                          // Home icon for first button
+                          <span className="text-sm md:text-base">🏠</span>
+                        ) : (
+                          // Numbers for chapters 1-5
+                          <span className={`
+                            text-xs md:text-sm font-bold
+                            ${isActive ? 'text-dark-900' : 'text-bronze-200'}
+                          `}>
+                            {chapter.id}
+                          </span>
+                        )}
+                      </div>
 
                       {/* Chapter Icon & Title (on hover) */}
                       <motion.div
