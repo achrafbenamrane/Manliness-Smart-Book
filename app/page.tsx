@@ -68,15 +68,19 @@ export default function Home() {
               <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 w-8 h-8 md:w-16 md:h-16 border-b-2 border-l-2 border-bronze-600 opacity-60"></div>
               <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-8 h-8 md:w-16 md:h-16 border-b-2 border-r-2 border-bronze-600 opacity-60"></div>
 
-              {/* Book Icon */}
+              {/* Logo Icon */}
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center mb-4 md:mb-8"
               >
-                <div className="text-5xl md:text-7xl filter drop-shadow-[0_0_20px_rgba(196,164,132,0.6)]">
-                  📖
+                <div className="relative w-20 h-20 md:w-28 md:h-28 mx-auto filter drop-shadow-[0_0_30px_rgba(196,164,132,0.6)]">
+                  <img 
+                    src="/logo.png" 
+                    alt="Evolution of Manliness Logo" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </motion.div>
 

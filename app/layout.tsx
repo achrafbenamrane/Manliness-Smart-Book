@@ -18,6 +18,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "The Evolution of Manliness | Smart Book",
   description: "An immersive journey through ancient masculine principles and modern realities",
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default async function RootLayout({
