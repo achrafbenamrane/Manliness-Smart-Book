@@ -5,7 +5,7 @@ import Chapter, { Section, Quote, Comparison } from '@/components/Chapter';
 
 export default function Chapter1() {
   return (
-    <SmartBookLayout currentChapter={1} totalChapters={6}>
+    <SmartBookLayout currentChapter={1} totalChapters={5}>
       <Chapter
         number={1}
         title="Ancient Masculine Principles"

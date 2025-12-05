@@ -5,7 +5,7 @@ import Chapter, { Section, Quote } from '@/components/Chapter';
 
 export default function Chapter5() {
   return (
-    <SmartBookLayout currentChapter={5} totalChapters={6}>
+    <SmartBookLayout currentChapter={5} totalChapters={5}>
       <Chapter
         number={5}
         title="The Path of Honor: Final Chapter"
