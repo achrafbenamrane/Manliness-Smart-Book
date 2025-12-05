@@ -87,7 +87,7 @@ export default function SmartBookLayout({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="fixed bottom-8 right-8 z-50"
+        className="fixed top-8 right-8 z-50"
       >
         <div className="glass-effect rounded-lg px-4 py-2 border border-bronze-600/30">
           <p className="font-serif text-bronze-400/80 text-sm">

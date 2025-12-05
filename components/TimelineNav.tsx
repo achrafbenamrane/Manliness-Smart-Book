@@ -46,7 +46,7 @@ export default function TimelineNav({ currentChapter, totalChapters }: TimelineN
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center gap-2"
+                    className="flex flex-col items-center gap-2 relative"
                   >
                     {/* Chapter Dot */}
                     <div
@@ -62,6 +62,20 @@ export default function TimelineNav({ currentChapter, totalChapters }: TimelineN
                     `}
                     />
 
+                    {/* Connecting Line */}
+                    {index < chapters.length - 1 && (
+                      <div
+                        className={`
+                        absolute top-[5px] md:top-[6px] left-[50%] w-[calc(100%+0.25rem)] md:w-[calc(100%+0.5rem)] h-[1.5px] md:h-[2px]
+                        transition-all duration-300
+                        ${isPast 
+                          ? 'bg-bronze-600/50' 
+                          : 'bg-iron-600/20'
+                        }
+                      `}
+                      />
+                    )}
+
                     {/* Chapter Icon & Title (on hover) - Hidden on very small screens */}
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -76,20 +90,6 @@ export default function TimelineNav({ currentChapter, totalChapters }: TimelineN
                       </div>
                     </motion.div>
                   </motion.div>
-
-                  {/* Connecting Line */}
-                  {index < chapters.length - 1 && (
-                    <div
-                      className={`
-                      absolute top-[5px] md:top-[6px] left-1/2 w-full h-[1.5px] md:h-[2px] -z-10
-                      transition-all duration-300
-                      ${isPast 
-                        ? 'bg-bronze-600/50' 
-                        : 'bg-iron-600/20'
-                      }
-                    `}
-                    />
-                  )}
                 </Link>
               );
             })}
