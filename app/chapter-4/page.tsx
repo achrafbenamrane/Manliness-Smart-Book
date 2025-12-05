@@ -150,6 +150,78 @@ export default function Chapter4() {
           </div>
         </Section>
 
+        <Section title="Learn from Men Who Resisted" delay={0.3}>
+          <p className="text-bronze-200 text-lg mb-4">
+            While Western masculinity was being systematically dismantled, certain communities 
+            maintained their standards. Algerian men, Muslim men worldwide—they didn't fall for 
+            the propaganda because they had something stronger: faith-based identity.
+          </p>
+
+          <div className="glass-effect rounded-lg p-8 my-8 metal-border">
+            <h4 className="text-2xl font-serif text-bronze-400 mb-6 text-center">
+              Why Muslim Men Resisted Cultural Subversion
+            </h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h5 className="text-bronze-400 font-bold mb-3">🕌 Spiritual Foundation</h5>
+                <p className="text-bronze-200 mb-4">
+                  Islam provided an unshakeable framework. When media said "masculinity is toxic," 
+                  the Quran said "men are protectors and maintainers." No debate. No confusion.
+                </p>
+                <p className="text-bronze-200 text-sm italic">
+                  "The best of you are those who are best to their families" - Prophet Muhammad (PBUH)
+                </p>
+              </div>
+              <div>
+                <h5 className="text-bronze-400 font-bold mb-3">👴 Elder Authority</h5>
+                <p className="text-bronze-200 mb-4">
+                  Algerian grandfathers didn't watch Hollywood's version of masculinity. They lived it. 
+                  Young men learned by example, not Netflix. Authority figures were respected, not ridiculed.
+                </p>
+                <p className="text-bronze-200 text-sm italic">
+                  "He who does not respect the elders is not one of us" - Islamic Wisdom
+                </p>
+              </div>
+              <div>
+                <h5 className="text-bronze-400 font-bold mb-3">⚖️ Clear Roles</h5>
+                <p className="text-bronze-200 mb-4">
+                  No gender confusion. Men protect and provide. Women nurture and educate. 
+                  Both roles honored, both essential. No competition—complementary design.
+                </p>
+              </div>
+              <div>
+                <h5 className="text-bronze-400 font-bold mb-3">🛡️ Community Defense</h5>
+                <p className="text-bronze-200 mb-4">
+                  Muslim communities protected their youth from cultural poison. Limited media exposure. 
+                  Strong family bonds. Mosque networks. Brothers keeping brothers accountable.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-bronze-200 text-lg mb-4">
+            This isn't about religion—it's about having a framework that can't be deconstructed by 
+            trends. When your identity comes from eternal truths instead of cultural winds, you become 
+            immune to propaganda.
+          </p>
+
+          <div className="glass-effect rounded-lg p-6 my-8 border-l-4 border-bronze-600">
+            <h4 className="text-bronze-400 font-bold text-xl mb-4">The Algerian Model of Rebuilding</h4>
+            <ol className="space-y-3 text-bronze-200">
+              <li><strong>1. Faith First:</strong> Anchor your identity in something bigger than culture. 
+              Whether Islamic, Christian, or philosophical—find unchangeable principles.</li>
+              <li><strong>2. Respect Elders:</strong> Find older men who lived through hardship. 
+              Learn from their scars, not influencers' filters.</li>
+              <li><strong>3. Reject Consumption:</strong> Stop consuming Western media designed to confuse you. 
+              Read books. Learn skills. Build things.</li>
+              <li><strong>4. Protect the Next:</strong> Once you become strong, guard younger men from 
+              the same traps. Be the elder you wish you had.</li>
+              <li><strong>5. Live the Code:</strong> Don't just talk about honor and discipline—embody it. 
+              Every. Single. Day.</li>
+            </ol>
+          </div>
+        </Section>
+
         <Quote
           text="Nobody is coming to save you. No course will fix you. No guru has the answer. The only person who can rebuild you is the man in the mirror."
           author="The Final Truth"

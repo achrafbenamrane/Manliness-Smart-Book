@@ -114,6 +114,57 @@ export default function Chapter2() {
             other men's failures. They mistake attention for respect, and followers for brothers.
           </p>
         </Section>
+
+        <Section title="The Mujahideen Spirit: Modern Warriors" delay={0.4}>
+          <p className="text-bronze-200 text-lg mb-4">
+            While the West was busy deconstructing warrior culture, calling it "toxic" and "outdated," 
+            the Algerian freedom fighters (Mujahideen) proved that warrior discipline is timeless.
+          </p>
+
+          <div className="glass-effect rounded-lg p-8 my-8 border-l-4 border-bronze-600">
+            <h4 className="text-2xl font-serif font-bold text-bronze-400 mb-4">
+              Lessons from Algerian Warriors
+            </h4>
+            <div className="space-y-4 text-bronze-200">
+              <p>
+                <strong className="text-bronze-300">They Fought with Nothing:</strong> No billion-dollar 
+                military budget. No advanced weapons. Just faith, brotherhood, and refusal to submit. 
+                They beat a superpower because their will was unbreakable.
+              </p>
+              <p>
+                <strong className="text-bronze-300">Discipline in Chaos:</strong> Prayer times maintained 
+                even in war zones. Fasting during Ramadan while fighting. Their spiritual discipline 
+                made them mentally unbreakable.
+              </p>
+              <p>
+                <strong className="text-bronze-300">Brotherhood Beyond Blood:</strong> Men from different 
+                tribes, villages, backgrounds—united by purpose. They protected each other with their lives. 
+                No man left behind wasn't a slogan; it was sacred law.
+              </p>
+              <p>
+                <strong className="text-bronze-300">Legacy Over Life:</strong> They knew they might die. 
+                They fought anyway. Because some things matter more than survival: freedom, honor, 
+                and the future of their children.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-bronze-200 text-lg mb-4">
+            These weren't barbarians. They were educated men who chose resistance over comfort. 
+            Teachers who became fighters. Farmers who became strategists. Students who became martyrs.
+          </p>
+
+          <p className="text-bronze-200 text-lg">
+            Today's generation needs this warrior spirit—not for physical war, but for the cultural 
+            and spiritual battles we face. The discipline to resist propaganda. The courage to stand 
+            for truth when it's unpopular. The brotherhood to build together instead of tearing each other down.
+          </p>
+        </Section>
+
+        <Quote
+          text="The Algerian warrior didn't fear death—he feared dying without purpose. Modern men fear discomfort—and die without ever truly living."
+          delay={0.5}
+        />
       </Chapter>
     </SmartBookLayout>
   );
