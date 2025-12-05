@@ -105,7 +105,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-center mb-6 md:mb-10"
               >
-                <p className="text-bronze-400/60 text-xs md:text-sm tracking-widest mb-2">WRITTEN BY</p>
+                <p className="text-bronze-400/60 text-xs md:text-sm tracking-widest mb-2">{t('writtenBy')}</p>
                 <p className="text-bronze-300 text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-bold tracking-wide px-4">
                   {t('author')}
                 </p>

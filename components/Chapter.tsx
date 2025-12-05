@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import {useTranslations} from 'next-intl';
 
 interface ChapterProps {
   number: number;
@@ -11,6 +12,8 @@ interface ChapterProps {
 }
 
 export default function Chapter({ number, title, subtitle, children }: ChapterProps) {
+  const t = useTranslations('chapter');
+  
   return (
     <div className="min-h-screen px-8 py-20 max-w-6xl mx-auto">
       {/* Chapter Header */}
@@ -27,7 +30,7 @@ export default function Chapter({ number, title, subtitle, children }: ChapterPr
           className="inline-block mb-4"
         >
           <span className="text-bronze-400/60 font-mono text-sm tracking-[0.3em]">
-            CHAPTER {number}
+            {t('chapterLabel')} {number}
           </span>
         </motion.div>
 
@@ -131,6 +134,8 @@ interface ComparisonProps {
 }
 
 export function Comparison({ oldMen, modernMen, delay = 0 }: ComparisonProps) {
+  const t = useTranslations('chapter');
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -145,7 +150,7 @@ export function Comparison({ oldMen, modernMen, delay = 0 }: ComparisonProps) {
         className="glass-effect border-l-4 border-bronze-600 rounded-lg p-6"
       >
         <h3 className="text-2xl font-serif font-bold text-bronze-400 mb-4 flex items-center gap-2">
-          ⚔ REAL OLD MEN
+          ⚔ {t('realOldMen')}
         </h3>
         <ul className="space-y-3">
           {oldMen.map((trait, index) => (
@@ -170,7 +175,7 @@ export function Comparison({ oldMen, modernMen, delay = 0 }: ComparisonProps) {
         className="glass-effect border-l-4 border-red-600/60 rounded-lg p-6"
       >
         <h3 className="text-2xl font-serif font-bold text-red-400/80 mb-4 flex items-center gap-2">
-          ⚠ FAKE MODERN MEN
+          ⚠ {t('fakeModernMen')}
         </h3>
         <ul className="space-y-3">
           {modernMen.map((trait, index) => (
