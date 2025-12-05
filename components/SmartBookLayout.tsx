@@ -82,18 +82,16 @@ export default function SmartBookLayout({
         totalChapters={totalChapters} 
       />
 
-      {/* Page Counter with Book Aesthetic */}
+      {/* Page Counter - Centered below navigation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="fixed bottom-8 right-8 z-50"
+        className="fixed bottom-2 left-1/2 -translate-x-1/2 z-30"
       >
-        <div className="glass-effect rounded-lg px-4 py-2 border border-bronze-600/30">
-          <p className="font-serif text-bronze-400/80 text-sm">
-            Chapter <span className="text-bronze-300 font-bold text-lg">{currentChapter}</span> of {totalChapters}
-          </p>
-        </div>
+        <p className="font-serif text-bronze-400/60 text-xs">
+          Chapter <span className="text-bronze-300 font-medium">{currentChapter}</span> of {totalChapters}
+        </p>
       </motion.div>
 
       {/* Book Spine Shadow (Left Edge) */}
