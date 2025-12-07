@@ -2,16 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import SmartBookLayout from '@/components/SmartBookLayout';
-import Chapter from '@/components/Chapter';
-import Section from '@/components/Section';
+import Chapter, { Section } from '@/components/Chapter';
 
 export default function Chapter5() {
   const t = useTranslations('chapter5');
 
   return (
-    <SmartBookLayout>
+    <SmartBookLayout currentChapter={5} totalChapters={5}>
       <Chapter
-        number={t('number')}
+        number={5}
         title={t('title')}
         subtitle={t('subtitle')}
       >
