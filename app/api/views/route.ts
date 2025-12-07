@@ -1,52 +1,27 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { kv } from '@vercel/kv';
 
-const viewsFilePath = path.join(process.cwd(), 'data', 'views.json');
-
-// Ensure data directory exists
-function ensureDataDir() {
-  const dataDir = path.join(process.cwd(), 'data');
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
-  }
-}
-
-// Get current views
-function getViews(): number {
-  ensureDataDir();
-  try {
-    if (fs.existsSync(viewsFilePath)) {
-      const data = fs.readFileSync(viewsFilePath, 'utf-8');
-      const json = JSON.parse(data);
-      return json.views || 0;
-    }
-  } catch (error) {
-    console.error('Error reading views:', error);
-  }
-  return 0;
-}
-
-// Save views
-function saveViews(views: number) {
-  ensureDataDir();
-  try {
-    fs.writeFileSync(viewsFilePath, JSON.stringify({ views, lastUpdated: new Date().toISOString() }));
-  } catch (error) {
-    console.error('Error saving views:', error);
-  }
-}
+const VIEWS_KEY = 'book_views';
 
 // GET - Return current views
 export async function GET() {
-  const views = getViews();
-  return NextResponse.json({ views });
+  try {
+    const views = await kv.get<number>(VIEWS_KEY) || 0;
+    return NextResponse.json({ views });
+  } catch (error) {
+    console.error('Error getting views:', error);
+    return NextResponse.json({ views: 0 });
+  }
 }
 
 // POST - Increment views
 export async function POST() {
-  const currentViews = getViews();
-  const newViews = currentViews + 1;
-  saveViews(newViews);
-  return NextResponse.json({ views: newViews });
+  try {
+    const newViews = await kv.incr(VIEWS_KEY);
+    return NextResponse.json({ views: newViews });
+  } catch (error) {
+    console.error('Error incrementing views:', error);
+    // Fallback response
+    return NextResponse.json({ views: 0 });
+  }
 }
