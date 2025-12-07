@@ -3,9 +3,12 @@ import { Redis } from '@upstash/redis';
 
 const VIEWS_KEY = 'book_views';
 
-// Initialize Redis from environment variables
-// Vercel will provide UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN
-const redis = Redis.fromEnv();
+// Initialize Redis with your Upstash credentials
+// Using KV_REST_API_URL and KV_REST_API_TOKEN from environment
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL || '',
+  token: process.env.KV_REST_API_TOKEN || '',
+});
 
 // GET - Return current views
 export async function GET() {
