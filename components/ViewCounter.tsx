@@ -36,23 +36,28 @@ export default function ViewCounter() {
 
   if (isLoading || views === null) {
     return (
-      <div className="flex items-center gap-2 text-bronze-400/60">
-        <span className="text-sm">👁️</span>
-        <span className="text-sm">Loading...</span>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="fixed top-6 left-6 z-50 glass-effect rounded-lg px-4 py-2 border border-bronze-600/30 flex items-center gap-2"
+      >
+        <span className="text-lg">👁️</span>
+        <span className="text-bronze-300/60 font-medium text-sm">...</span>
+      </motion.div>
     );
   }
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center gap-2 text-bronze-400"
+      className="fixed top-6 left-6 z-50 glass-effect rounded-lg px-4 py-2 border border-bronze-600/30 flex items-center gap-2"
     >
       <span className="text-lg">👁️</span>
-      <span className="text-sm font-medium">
-        {views.toLocaleString()} {views === 1 ? 'view' : 'views'}
+      <span className="text-bronze-300 font-medium text-sm">
+        {views.toLocaleString()}
       </span>
     </motion.div>
   );

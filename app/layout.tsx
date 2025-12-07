@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ViewCounter from "@/components/ViewCounter";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 
@@ -37,6 +38,7 @@ export default async function RootLayout({
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.variable} ${playfair.variable}`}>
       <body className={`${inter.className} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <ViewCounter />
           <LanguageSwitcher />
           {children}
         </NextIntlClientProvider>
