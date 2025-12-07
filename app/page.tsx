@@ -73,7 +73,7 @@ export default function Home() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center mb-6 md:mb-10"
+                className="text-center mb-2 md:mb-4"
               >
                 <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 xl:w-72 xl:h-72 mx-auto filter drop-shadow-[0_0_40px_rgba(196,164,132,0.7)]">
                   <img 
