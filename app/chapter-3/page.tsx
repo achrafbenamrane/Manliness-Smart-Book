@@ -1,7 +1,7 @@
 'use client';
 
 import SmartBookLayout from '@/components/SmartBookLayout';
-import Chapter, { Section, Quote, Comparison } from '@/components/Chapter';
+import Chapter, { Section } from '@/components/Chapter';
 import {useTranslations} from 'next-intl';
 
 export default function Chapter3() {
@@ -14,156 +14,91 @@ export default function Chapter3() {
         title={t('title')}
         subtitle={t('subtitle')}
       >
-        <Section title={t('deceptionTitle')}>
-          <p className="text-bronze-200 text-lg mb-4">
-            {t('deceptionText')}
+        <Section title="">
+          <p className="text-bronze-200 text-lg leading-relaxed mb-6">
+            {t('introText')}
           </p>
         </Section>
 
-        <Section title={t('influencerTitle')} delay={0.1}>
-          <p className="text-bronze-200 text-lg mb-4">
-            {t('influencerText')}
+        <Section title={t('section1Title')} delay={0.1}>
+          <p className="text-bronze-200 text-lg leading-relaxed">
+            {t('section1Text')}
           </p>
         </Section>
 
-        <Quote
-          text={t('influencerQuote')}
-          delay={0.2}
-        />
-
-        <Comparison
-          oldMen={t.raw('comparisonOldMen')}
-          modernMen={t.raw('comparisonModernMen')}
-          delay={0.3}
-        />
-
-        <Section title={t('complexTitle')} delay={0.1}>
-          <p className="text-bronze-200 text-lg mb-4">
-            {t('complexText')}
-          </p>
-          <div className="space-y-4 my-8">
-            <div className="glass-effect rounded-lg p-6 border-l-4 border-red-600/60">
-              <h4 className="text-red-400 font-bold mb-2">{t('step1Title')}</h4>
-              <p className="text-iron-400">
-                {t('step1Text')}
-              </p>
-            </div>
-            <div className="glass-effect rounded-lg p-6 border-l-4 border-red-600/60">
-              <h4 className="text-red-400 font-bold mb-2">{t('step2Title')}</h4>
-              <p className="text-iron-400">
-                {t('step2Text')}
-              </p>
-            </div>
-            <div className="glass-effect rounded-lg p-6 border-l-4 border-red-600/60">
-              <h4 className="text-red-400 font-bold mb-2">{t('step3Title')}</h4>
-              <p className="text-iron-400">
-                {t('step3Text')}
-              </p>
-            </div>
-            <div className="glass-effect rounded-lg p-6 border-l-4 border-red-600/60">
-              <h4 className="text-red-400 font-bold mb-2">{t('step4Title')}</h4>
-              <p className="text-iron-400">
-                {t('step4Text')}
-              </p>
-            </div>
-          </div>
-        </Section>
-
-        <Quote
-          text={t('fakeQuote')}
-          delay={0.4}
-        />
-
-        <Section title={t('victimsTitle')} delay={0.2}>
-          <p className="text-bronze-200 text-lg mb-4">
-            {t('victimsText1')}
-          </p>
-          <p className="text-bronze-200 text-lg mb-4">
-            {t('victimsText2')}
-          </p>
-        </Section>
-
-        <div className="glass-effect rounded-lg p-8 my-12 metal-border">
-          <h3 className="text-2xl font-serif font-bold text-bronze-400 mb-4 text-center">
-            {t('truthTitle')}
-          </h3>
-          <p className="text-bronze-200 text-lg text-center whitespace-pre-line">
-            {t('truthText')}
-          </p>
-        </div>
-
-        <Section title={t('propagandaTitle')} delay={0.3}>
-          <p className="text-bronze-200 text-lg mb-4">
-            {t('propagandaText')}
+        <Section title={t('section2Title')} delay={0.15}>
+          <p className="text-bronze-200 text-lg leading-relaxed mb-4">
+            {t('section2Intro')}
           </p>
           
-          <div className="space-y-6 my-8">
-            <div className="glass-effect rounded-lg p-8 border-l-4 border-red-600/60">
-              <h4 className="text-xl font-bold text-red-400 mb-4">{t('gamesTitle')}</h4>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <h5 className="text-bronze-400 font-bold mb-2">{t('gamesOld')}</h5>
-                  <ul className="text-bronze-200 text-sm space-y-1">
-                    {(t.raw('gamesOldList') as string[]).map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="text-red-400 font-bold mb-2">{t('gamesNew')}</h5>
-                  <ul className="text-iron-400 text-sm space-y-1">
-                    {(t.raw('gamesNewList') as string[]).map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+          <div className="glass-effect rounded-lg p-6 mb-4 border-l-4 border-green-600/60">
+            <h4 className="text-green-400 font-bold text-xl mb-3">{t('oldGamesTitle')}</h4>
+            <p className="text-bronze-200 leading-relaxed">
+              {t('oldGamesText')}
+            </p>
+          </div>
+
+          <div className="glass-effect rounded-lg p-6 border-l-4 border-red-600/60">
+            <h4 className="text-red-400 font-bold text-xl mb-3">{t('newGamesTitle')}</h4>
+            <p className="text-iron-400 leading-relaxed">
+              {t('newGamesText')}
+            </p>
+          </div>
+        </Section>
+
+        <Section title={t('section3Title')} delay={0.2}>
+          <p className="text-bronze-200 text-lg leading-relaxed mb-4">
+            {t('section3Intro')}
+          </p>
+          <p className="text-bronze-200 text-lg leading-relaxed">
+            {t('section3Text')}
+          </p>
+        </Section>
+
+        <Section title={t('section4Title')} delay={0.25}>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="glass-effect rounded-lg p-6 border-l-4 border-green-600/60">
+              <h4 className="text-green-400 font-bold text-xl mb-3">{t('oldMenTitle')}</h4>
+              <ul className="text-bronze-200 space-y-2">
+                {(t.raw('oldMenList') as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-bronze-300 italic mt-4 text-sm">
+                {t('oldMenFooter')}
+              </p>
             </div>
 
-            <div className="glass-effect rounded-lg p-8 border-l-4 border-red-600/60">
-              <h4 className="text-xl font-bold text-red-400 mb-4">{t('musicTitle')}</h4>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <h5 className="text-bronze-400 font-bold mb-2">{t('musicOld')}</h5>
-                  <ul className="text-bronze-200 text-sm space-y-1">
-                    {(t.raw('musicOldList') as string[]).map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="text-red-400 font-bold mb-2">{t('musicNew')}</h5>
-                  <ul className="text-iron-400 text-sm space-y-1">
-                    {(t.raw('musicNewList') as string[]).map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-effect rounded-lg p-8 border-l-4 border-red-600/60">
-              <h4 className="text-xl font-bold text-red-400 mb-4">{t('moviesTitle')}</h4>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <h5 className="text-bronze-400 font-bold mb-2">{t('moviesOld')}</h5>
-                  <ul className="text-bronze-200 text-sm space-y-1">
-                    {(t.raw('moviesOldList') as string[]).map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="text-red-400 font-bold mb-2">{t('moviesNew')}</h5>
-                  <ul className="text-iron-400 text-sm space-y-1">
-                    {(t.raw('moviesNewList') as string[]).map((item, i) => (
-                      <li key={i}>• {item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+            <div className="glass-effect rounded-lg p-6 border-l-4 border-red-600/60">
+              <h4 className="text-red-400 font-bold text-xl mb-3">{t('newMenTitle')}</h4>
+              <ul className="text-iron-400 space-y-2">
+                {(t.raw('newMenList') as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-red-400 mr-2">✗</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-iron-300 italic mt-4 text-sm">
+                {t('newMenFooter')}
+              </p>
             </div>
           </div>
+        </Section>
+
+        <Section title={t('section5Title')} delay={0.3}>
+          <p className="text-bronze-200 text-lg leading-relaxed">
+            {t('section5Text')}
+          </p>
+        </Section>
+
+        <Section title={t('section6Title')} delay={0.35}>
+          <p className="text-bronze-200 text-lg leading-relaxed font-semibold">
+            {t('section6Text')}
+          </p>
         </Section>
       </Chapter>
     </SmartBookLayout>
