@@ -42,8 +42,8 @@ export default function ViewCounter() {
         transition={{ duration: 0.5 }}
         className="fixed top-6 left-6 z-50 glass-effect rounded-lg px-4 py-2 border border-bronze-600/30 flex items-center gap-2"
       >
-        <span className="text-lg">👁️</span>
-        <span className="text-bronze-300/60 font-medium text-sm">...</span>
+        <span className="text-bronze-300 font-medium text-sm">...</span>
+        <span className="text-base">👁️</span>
       </motion.div>
     );
   }
@@ -55,10 +55,10 @@ export default function ViewCounter() {
       transition={{ duration: 0.5 }}
       className="fixed top-6 left-6 z-50 glass-effect rounded-lg px-4 py-2 border border-bronze-600/30 flex items-center gap-2"
     >
-      <span className="text-lg">👁️</span>
       <span className="text-bronze-300 font-medium text-sm">
         {views.toLocaleString()}
       </span>
+      <span className="text-base">👁️</span>
     </motion.div>
   );
 }
